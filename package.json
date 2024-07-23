@@ -4,13 +4,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devStart" : "nodemon script.ts"
+    "devStart": "nodemon script.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "csv-parser": "^3.0.0",
     "mongoose": "^6.10.0",
     "typescript": "^5.5.4"
   },
