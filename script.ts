@@ -8,9 +8,10 @@ let courses: Course[]
 let prerequisites : any =[]
 const LoadInsert = async() =>{
     try{
-        courses = await readCSVFile<Course>('Data/courses.csv');
-        prerequisites = await readCSVFile<Prerequisite>('Data/prerequisite.csv');
+        courses = await readCSVFile<Course>('staticData/courses.csv');
+        prerequisites = await readCSVFile<Prerequisite>('staticData/prerequisite.csv');
         console.log(courses)
+        console.log("prerequisite",prerequisites)
         if(courses){
             await insertCourses(courses);
         }
@@ -22,3 +23,4 @@ const LoadInsert = async() =>{
         console.log("Error fetching or Inserting:", e);
     } 
 }
+LoadInsert()
