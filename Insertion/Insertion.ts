@@ -2,7 +2,7 @@ import {CourseModel,PrerequisiteModel} from "../collections/coursePrerequisite";
 import { Course } from "../types/types";
 
 import * as fs from 'fs';
-import csv from 'csv-parser';
+const csv = require('csv-parser')
 
 export const readCSVFile  = async <T>(filepath:string): Promise<T[]> => {
     return new Promise((resolve,reject) => {
