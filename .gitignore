@@ -5,3 +5,5 @@ Insertion.js
 types.js
 script.js
 queries.js
+route.js
+courseRouter.js
