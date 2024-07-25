@@ -1,7 +1,12 @@
 import { config } from "./config/config";
 import { Course, Prerequisite } from "./types/types";
 import { insertCourses, insertPrerequsite, readCSVFile } from "./Insertion/Insertion";
+import { router } from "./routes/route";
+import express from 'express'
 
+const app = express();
+app.use(express.json());
+app.use('/',router);
 
 config;
 let courses: Course[]
@@ -24,3 +29,8 @@ const LoadInsert = async() =>{
     } 
 }
 LoadInsert()
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
